@@ -1,0 +1,322 @@
+[2025-10-03 09:15:07] ID=TR-20251003-810
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 188, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 182, in process_all_json
+    print("\u2705 ไม่มีไฟล์ .json เหลือใน data/ แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:15:23] ID=TR-20251003-977
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 47, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 126, in process_file
+    send_email(to_email, subject, body,
+  File "C:\xampp\htdocs\testwebapp/send.py", line 50, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 188, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 179, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 161, in process_file
+    move_to_jaea(file_path, f"ประมวลผลไฟล์ไม่สำเร็จ: {e}")
+  File "C:\xampp\htdocs\testwebapp/send.py", line 77, in move_to_jaea
+    print(f"\u26a0\ufe0f ย้ายไฟล์ {file_path} ไปยัง {new_path} แล้ว (error: {reason})")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+
+[2025-10-03 09:20:14] ID=TR-20251003-779
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 47, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 126, in process_file
+    send_email(to_email, subject, body,
+  File "C:\xampp\htdocs\testwebapp/send.py", line 50, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 188, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 179, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 161, in process_file
+    move_to_jaea(file_path, f"ประมวลผลไฟล์ไม่สำเร็จ: {e}")
+  File "C:\xampp\htdocs\testwebapp/send.py", line 77, in move_to_jaea
+    print(f"\u26a0\ufe0f ย้ายไฟล์ {file_path} ไปยัง {new_path} แล้ว (error: {reason})")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+
+[2025-10-03 09:22:28] ID=TR-20251003-340
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 47, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 126, in process_file
+    send_email(to_email, subject, body,
+  File "C:\xampp\htdocs\testwebapp/send.py", line 50, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 188, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 179, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 161, in process_file
+    move_to_jaea(file_path, f"ประมวลผลไฟล์ไม่สำเร็จ: {e}")
+  File "C:\xampp\htdocs\testwebapp/send.py", line 77, in move_to_jaea
+    print(f"\u26a0\ufe0f ย้ายไฟล์ {file_path} ไปยัง {new_path} แล้ว (error: {reason})")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+
+
+[2025-10-03 09:32:03] ID=TR-20251003-865
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:32:14] ID=TR-20251003-865
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:38:12] ID=TR-20251003-137
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:38:15] ID=TR-20251003-137
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:38:24] ID=TR-20251003-137
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:38:41] ID=TR-20251003-137
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+
+[2025-10-03 09:38:44] ID=TR-20251003-137
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 24, in send_email
+    print(f"\u2705 ส่งเมลไปยัง {to_email} แล้ว")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\xampp\htdocs\testwebapp/send.py", line 117, in <module>
+    process_all_json()
+  File "C:\xampp\htdocs\testwebapp/send.py", line 108, in process_all_json
+    process_file(file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 49, in process_file
+    send_record(record, file_path, sender_email, sender_password)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 90, in send_record
+    send_email(sender_email, sender_password, "ddc@seabratrans.com", subject, body)
+  File "C:\xampp\htdocs\testwebapp/send.py", line 27, in send_email
+    print(f"\u274c ส่งเมลไม่สำเร็จไปยัง {to_email}: {e}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\encodings\cp874.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+
+

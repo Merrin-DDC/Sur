@@ -1,0 +1,22 @@
+[
+    {
+        "id": "TR-20251001-617",
+        "name": "Puttichai Punthanapat",
+        "company": "DDC Company",
+        "tel": "21133854",
+        "email": "ddc@seabratrans.com",
+        "FoodBeverage": 1,
+        "BeautyCosmetic": 0,
+        "LivingLifestyle": 0,
+        "HealthWellness": 0,
+        "General Cargo": 0,
+        "CustomsBrokerage": 0,
+        "AppLicense": 1,
+        "Registrationwithvariousagencies": 0,
+        "AirFreightImport": 0,
+        "AirFreightExport": 1,
+        "SeaFreightImport": 0,
+        "SeaFreightExport": 0,
+        "status": "0"
+    }
+]

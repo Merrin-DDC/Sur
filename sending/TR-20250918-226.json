@@ -1,0 +1,22 @@
+[
+    {
+        "id": "TR-20250918-226",
+        "name": "สาทิส คึกสันเที๊ยะ",
+        "company": "Seabratrans",
+        "tel": "12314",
+        "email": "ddc@seabratrans.com",
+        "FoodBeverage": 1,
+        "BeautyCosmetic": 0,
+        "LivingLifestyle": 0,
+        "HealthWellness": 0,
+        "General Cargo": 0,
+        "CustomsBrokerage": 1,
+        "AppLicense": 1,
+        "Registrationwithvariousagencies": 1,
+        "AirFreightImport": 0,
+        "AirFreightExport": 1,
+        "SeaFreightImport": 0,
+        "SeaFreightExport": 1,
+        "status": "0"
+    }
+]

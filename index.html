@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Get Quote Form</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<header>
+  <img src="https://i.imghippo.com/files/ziqj5305k.png" alt="SeABRA Logo">
+</header>
+
+<main>
+  <div class="quote-container">
+    <div class="form-section">
+      <h2>Choose a Service & Get a Quote</h2>
+      <div class="form-container">
+        <form id="quoteForm">
+          <div class="form-row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+          <div class="form-row">
+            <label for="tel">Tel:</label>
+            <input type="text" id="tel" name="tel" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-row">
+            <label>Service:</label>
+            <button type="button" id="serviceToggle">Select Service</button>
+            <div class="subservice-container" style="display:none;">
+              <label>Select Sub Services (multiple):</label>
+              <div class="subservice-options"></div>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+const services = {
+  "Product Service": ["Food&Beverage","Beauty&Cosmetic","Living&Lifestyle","Health&Wellness","General Cargo"],
+  "Customs Brokerage": ["CustomsBrokerage", "AppLicense", "Registrationwithvariousagencies"],
+  "Airfreight": ["AirFreightImport", "AirFreightExport"],
+  "Seafreight": ["SeaFreightImport", "SeaFreightExport"]
+};
+
+const serviceToggle = document.getElementById("serviceToggle");
+const subserviceContainer = document.querySelector(".subservice-container");
+const subserviceOptionsDiv = document.querySelector(".subservice-options");
+
+// Toggle service list
+serviceToggle.addEventListener("click", (e) => {
+  e.preventDefault(); // ป้องกันการ refresh หน้า
+  const isActive = serviceToggle.classList.toggle("active");
+  subserviceContainer.style.display = isActive ? "block" : "none";
+
+  if(isActive){
+    subserviceOptionsDiv.innerHTML = "";
+    Object.keys(services).forEach(service => {
+      const groupDiv = document.createElement("div");
+      groupDiv.classList.add("service-group");
+
+      const heading = document.createElement("h4");
+      heading.textContent = service;
+      groupDiv.appendChild(heading);
+
+      services[service].forEach(sub => {
+        const label = document.createElement("label");
+        label.classList.add("subservice-label");
+
+        let inputValue = sub;
+        if (service === "Product Service") {
+            inputValue = sub.replace(/&/g, '');
+        }
+        label.innerHTML = `<input type="checkbox" name="subService" value="${inputValue}"> ${sub}`;
+        groupDiv.appendChild(label);
+      });
+
+      subserviceOptionsDiv.appendChild(groupDiv);
+    });
+  }
+});
+
+
+// Submit form
+const form = document.getElementById("quoteForm");
+form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const today = new Date();
+    const id = "TR-" + today.getFullYear() + 
+               ("0" + (today.getMonth() + 1)).slice(-2) + 
+               ("0" + today.getDate()).slice(-2) + "-" + 
+               Math.floor(Math.random() * 900 + 100);
+
+    const serviceData = {};
+    Object.keys(services).forEach(serviceCategory => {
+        services[serviceCategory].forEach(subService => {
+            let valueToCheck = subService;
+            if (serviceCategory === "Product Service") {
+                valueToCheck = subService.replace(/&/g, '');
+            }
+            const checkbox = document.querySelector(`input[name="subService"][value="${valueToCheck}"]`);
+            serviceData[valueToCheck] = checkbox?.checked ? 1 : 0;
+        });
+    });
+
+    const data = {
+        id: id,
+        name: document.getElementById("name").value,
+        company: document.getElementById("company").value,
+        tel: document.getElementById("tel").value,
+        email: document.getElementById("email").value,
+        ...serviceData,
+        status: "0",
+    };
+
+    // ส่งข้อมูลไป save.php
+    fetch("save.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        if (res.status === "success") {
+            .then(res => {
+                if (res.status === "success") {
+                    window.location.href = "confirm.php?id=" + res.id; 
+                } else {
+                    alert("เกิดข้อผิดพลาด: " + res.message);
+                }
+            })
+            subserviceOptionsDiv.innerHTML = "";
+            serviceToggle.classList.remove("active");
+            subserviceContainer.style.display = "none";
+        } else {
+            alert("เกิดข้อผิดพลาด: " + res.message);
+        }
+    })
+    .catch(err => alert("เกิดข้อผิดพลาด: " + err));
+});
+</script>
+</body>
+</html>

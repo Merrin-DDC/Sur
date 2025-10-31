@@ -1,0 +1,14 @@
+{
+    "name": "สาทิส ",
+    "company": "satis",
+    "tel": "09888",
+    "email": "asad@sdf",
+    "subService": [
+        "FoodBeverage",
+        "BeautyCosmetic",
+        "CustomsBrokerage",
+        "AirFreightImport"
+    ],
+    "id": "TR-20251003-106",
+    "status": "0"
+}
