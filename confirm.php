@@ -21,7 +21,7 @@ if ($id) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirm Quote</title>
+<title>Confirm Services</title>
 <link rel="stylesheet" href="css/index.css">
 <style>
   .confirm-card { max-width:900px; margin:24px auto; background:#fff; border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
@@ -45,7 +45,7 @@ if ($id) {
   <div class="quote-container">
     <div class="confirm-section">
       <div class="confirm-card">
-        <h2>ข้อมูลการขอใบเสนอราคา</h2>
+        <h2>ข้อมูลและความสนใจในระบบ</h2>
 
         <?php if ($data): ?>
           <?php if (isset($_GET['success'])): ?>
@@ -100,3 +100,4 @@ if ($id) {
 </main>
 </body>
 </html>
+
