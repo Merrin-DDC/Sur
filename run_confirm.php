@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'] ?? '';
 
     if ($id) {
-        $python = "C:/Users/Satis/AppData/Local/Microsoft/WindowsApps/python3.11.exe";
+        $python = "python3 ";
         $script = __DIR__ . "/send.py";
 
         // run python script
@@ -22,3 +22,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 header("Location: index.php");
 exit;
+
